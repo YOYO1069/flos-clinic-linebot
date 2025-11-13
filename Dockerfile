@@ -1,45 +1,33 @@
-# Build stage
-FROM node:20-alpine AS builder
-
-# Install pnpm
-RUN npm install -g pnpm@10.4.1
-
-WORKDIR /app
-
-# Copy package files
-COPY package.json pnpm-lock.yaml ./
-COPY patches ./patches
-
-# Install dependencies
-RUN pnpm install --frozen-lockfile
-
-# Copy source code
-COPY . .
-
-# Build the application
-RUN pnpm run build
-
-# Production stage
+# 使用 Node.js 20 Alpine 基礎映像
 FROM node:20-alpine
 
-# Install pnpm
-RUN npm install -g pnpm@10.4.1
-
+# 設定工作目錄
 WORKDIR /app
 
-# Copy package files
-COPY package.json pnpm-lock.yaml ./
-COPY patches ./patches
+# 安裝 pnpm
+RUN npm install -g pnpm@10.4.1
 
-# Install production dependencies only
-RUN pnpm install --prod --frozen-lockfile
+# 複製 package 檔案
+COPY package.json pnpm-lock.yaml* ./
 
-# Copy built files from builder
-COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/client/dist ./client/dist
+# 複製 patches 目錄 (如果存在)
+COPY patches ./patches 2>/dev/null || true
 
-# Expose port
-EXPOSE 3000
+# 安裝所有依賴 (包括開發依賴,因為建置需要)
+RUN pnpm install --frozen-lockfile
 
-# Start the application
+# 複製所有原始碼
+COPY . .
+
+# 建置應用程式
+RUN pnpm run build
+
+# 暴露 port 8080
+EXPOSE 8080
+
+# 設定環境變數
+ENV NODE_ENV=production
+ENV PORT=8080
+
+# 啟動應用程式
 CMD ["pnpm", "start"]
