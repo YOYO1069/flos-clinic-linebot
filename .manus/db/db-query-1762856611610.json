@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS authorized_groups (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  lineGroupId VARCHAR(255) NOT NULL UNIQUE,\n  clinicId INT NOT NULL,\n  authorizationCode VARCHAR(64) NOT NULL,\n  isActive BOOLEAN DEFAULT TRUE,\n  authorizedAt DATETIME DEFAULT CURRENT_TIMESTAMP,\n  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,\n  updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2v5iTujRSfvcRKU.b4645a7b4151 --database UFemUTmg4WguAERRG2jt5M --execute CREATE TABLE IF NOT EXISTS authorized_groups (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  lineGroupId VARCHAR(255) NOT NULL UNIQUE,\n  clinicId INT NOT NULL,\n  authorizationCode VARCHAR(64) NOT NULL,\n  isActive BOOLEAN DEFAULT TRUE,\n  authorizedAt DATETIME DEFAULT CURRENT_TIMESTAMP,\n  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,\n  updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1618
+}

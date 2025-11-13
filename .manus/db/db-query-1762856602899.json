@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS authorization_codes (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  code VARCHAR(64) NOT NULL UNIQUE,\n  clinicId INT NOT NULL,\n  status ENUM('active', 'used', 'expired') DEFAULT 'active',\n  expiresAt DATETIME NULL,\n  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,\n  updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2v5iTujRSfvcRKU.b4645a7b4151 --database UFemUTmg4WguAERRG2jt5M --execute CREATE TABLE IF NOT EXISTS authorization_codes (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  code VARCHAR(64) NOT NULL UNIQUE,\n  clinicId INT NOT NULL,\n  status ENUM('active', 'used', 'expired') DEFAULT 'active',\n  expiresAt DATETIME NULL,\n  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,\n  updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1700
+}

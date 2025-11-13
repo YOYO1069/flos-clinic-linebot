@@ -1,0 +1,31 @@
+{
+  "query": "SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE()",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2v5iTujRSfvcRKU.b4645a7b4151 --database UFemUTmg4WguAERRG2jt5M --execute SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE()",
+  "rows": [
+    {
+      "TABLE_NAME": "__drizzle_migrations"
+    },
+    {
+      "TABLE_NAME": "users"
+    },
+    {
+      "TABLE_NAME": "appointments"
+    },
+    {
+      "TABLE_NAME": "clinics"
+    },
+    {
+      "TABLE_NAME": "lineGroupStates"
+    },
+    {
+      "TABLE_NAME": "authorizationCodes"
+    },
+    {
+      "TABLE_NAME": "authorizedGroups"
+    }
+  ],
+  "messages": [],
+  "stdout": "TABLE_NAME\n__drizzle_migrations\nusers\nappointments\nclinics\nlineGroupStates\nauthorizationCodes\nauthorizedGroups\n",
+  "stderr": "",
+  "execution_time_ms": 1553
+}

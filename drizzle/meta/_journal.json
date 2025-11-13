@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1762585606875,
+      "tag": "0000_flaky_bulldozer",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1762585722887,
+      "tag": "0001_wooden_living_lightning",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1762607242738,
+      "tag": "0002_funny_joystick",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1762609257876,
+      "tag": "0003_amusing_invaders",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1762749615649,
+      "tag": "0004_tan_iron_patriot",
+      "breakpoints": true
+    }
+  ]
+}

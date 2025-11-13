@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO authorization_codes (code, clinicId, status, expiresAt) VALUES ('AUTH-07LI6A', 1, 'active', NULL)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2v5iTujRSfvcRKU.b4645a7b4151 --database UFemUTmg4WguAERRG2jt5M --execute INSERT INTO authorization_codes (code, clinicId, status, expiresAt) VALUES ('AUTH-07LI6A', 1, 'active', NULL)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1533
+}

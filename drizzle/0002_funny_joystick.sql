@@ -1,0 +1,1 @@
+ALTER TABLE `lineGroupStates` ADD `conversationState` varchar(50) DEFAULT 'idle';
